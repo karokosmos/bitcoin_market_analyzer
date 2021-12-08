@@ -1,23 +1,57 @@
 import React, { useState } from 'react'
 
-const Form = () => {
+const Form = ({ getMarketData }) => {
   const [startDate, setStartDate] = useState('')
   const [endDate, setEndDate] = useState('')
-  console.log(startDate, endDate)
+  const [startTimestamp, setStartTimestamp] = useState()
+  const [endTimestamp, setEndTimestamp] = useState()
+
+  /* console.log('dates: ', startDate, endDate)
+  console.log('timestamps: ', startTimestamp, endTimestamp) */
+
+  const handleChange = e => {
+    const name = e.target.name
+    const dateValue = e.target.value
+
+    const dateArr = dateValue.split('-')
+    const year = Number(dateArr[0])
+    const month = Number(dateArr[1]) - 1
+    const day = Number(dateArr[2])
+
+    const date = new Date(year, month, day)
+    const unixTimestamp = date.getTime() / 1000
+
+    if (name === 'start-date') {
+      setStartDate(dateValue)
+      setStartTimestamp(unixTimestamp)
+    } else {
+      setEndDate(dateValue)
+      setEndTimestamp(unixTimestamp + 3600) // Add an hour to include last day
+    }
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    setStartDate('')
+    setEndDate('')
+    getMarketData(startTimestamp, endTimestamp)
+  }
 
   return (
-    <form className="Form">
+    <form className="Form" onSubmit={handleSubmit}>
       <input
         className="Form__input"
+        name="start-date"
         type="date"
         value={startDate}
-        onChange={(e) => setStartDate(e.target.value)}
+        onChange={handleChange}
       />
       <input
         className="Form__input"
+        name="end-date"
         type="date"
         value={endDate}
-        onChange={(e) => setEndDate(e.target.value)}
+        onChange={handleChange}
       />
       <button className="Form__button" type="submit">Analyze</button>
     </form>

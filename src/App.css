@@ -27,7 +27,9 @@
   border-radius: 3px;
   font-family: 'Outfit',
     sans-serif;
+  font-size: 1rem;
   color: #262626;
+  width: 11rem;
 }
 
 .Form__input:focus {
