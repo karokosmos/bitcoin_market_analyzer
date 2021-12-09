@@ -17,23 +17,33 @@ const getDailyPrices = prices => {
       return false
     }
   })
+    .map(price => {
+      return {
+        date: price[0],
+        price: price[1]
+      }
+    })
 
   return dailyPrices
 }
 
 // Get bitcoin market data for the provided date range, startDate and endDate as UNIX timestamps
-export const getBitcoinMarketData = async (startDate, endDate) => {
+const getBitcoinMarketData = async (startDate, endDate) => {
   try {
     const response = await axios.get(`${baseUrl}/coins/bitcoin/market_chart/range?vs_currency=eur&from=${startDate}&to=${endDate}`)
 
     const dailyPrices = getDailyPrices(response.data.prices)
-    return dailyPrices
+
+    return {
+      dailyPrices
+    }
 
   } catch (error) {
     console.log(error)
   }
 }
 
+export default getBitcoinMarketData
 
 
 /* const massaged = {

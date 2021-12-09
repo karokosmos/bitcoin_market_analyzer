@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Form = ({ getMarketData }) => {
+const DateRange = ({ getMarketData }) => {
   const [startDate, setStartDate] = useState('')
   const [endDate, setEndDate] = useState('')
   const [startTimestamp, setStartTimestamp] = useState()
@@ -58,4 +58,4 @@ const Form = ({ getMarketData }) => {
   )
 }
 
-export default Form
+export default DateRange
