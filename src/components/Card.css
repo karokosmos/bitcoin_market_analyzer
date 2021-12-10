@@ -1,0 +1,74 @@
+.Card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #8bc53f;
+  font-family: 'Outfit',
+    sans-serif;
+  font-weight: 600;
+  padding: 2rem 3rem;
+  margin: 1rem;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: relative;
+}
+
+.Card__title {
+  color: #5b7f24;
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+}
+
+.Card__content {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.Card__data {
+  font-size: 3.2rem;
+}
+
+.Card__data-type {
+  font-size: 1.2rem;
+  margin-left: 5px;
+}
+
+.Card__wrapper {
+  position: absolute;
+  bottom: 0.2rem;
+  right: 0.4rem;
+}
+
+.Card__tooltip {
+  position: relative;
+}
+
+.Card__button {
+  color: #5b7f24;
+  cursor: default;
+}
+
+.Card__button:hover {
+  color: #fff;
+}
+
+.Card__info {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  right: 120%;
+  z-index: 10;
+  background-color: #262626;
+  color: #fff;
+  padding: 0.7rem;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  width: 12rem;
+  /* text-align: center; */
+}
+
+.Card__button:hover+.Card__info {
+  visibility: visible;
+}

@@ -19,35 +19,3 @@
   padding: 2rem 1rem;
   color: #262626;
 }
-
-.Form__input {
-  border: 2px solid #262626;
-  padding: 0.5rem;
-  margin: 0 0.5rem;
-  border-radius: 3px;
-  font-family: 'Outfit',
-    sans-serif;
-  font-size: 1rem;
-  color: #262626;
-  width: 11rem;
-}
-
-.Form__input:focus {
-  border: 2px solid #8BC53F;
-  opacity: 1;
-  outline: none;
-  box-shadow: 1px 1px 0 #eee;
-  background-color: none;
-}
-
-.Form__button {
-  background-color: #8BC53F;
-  border: none;
-  padding: 1rem;
-  color: #fff;
-}
-
-/* .Form__input::-webkit-datetime-edit-day-field:focus {
-  background-color: #581cdb;
-  color: #eee;
-} */

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './App.css'
 import DateRange from './components/DateRange'
-import DataContainer from './components/DataContainer'
+import Analysis from './components/Analysis'
 import getBitcoinMarketData from './api/CryptoAPI'
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
       <h1 className="App__title">Bitcoin market analyzer</h1>
       <DateRange getMarketData={getMarketData} />
       {marketData &&
-        <DataContainer marketData={marketData} />}
+        <Analysis marketData={marketData} />}
     </div>
   )
 }

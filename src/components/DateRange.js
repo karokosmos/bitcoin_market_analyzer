@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './DateRange.css'
 
 const DateRange = ({ getMarketData }) => {
   const [startDate, setStartDate] = useState('')
@@ -38,22 +39,22 @@ const DateRange = ({ getMarketData }) => {
   }
 
   return (
-    <form className="Form" onSubmit={handleSubmit}>
+    <form className="DateRange" onSubmit={handleSubmit}>
       <input
-        className="Form__input"
+        className="DateRange__input"
         name="start-date"
         type="date"
         value={startDate}
         onChange={handleChange}
       />
       <input
-        className="Form__input"
+        className="DateRange__input"
         name="end-date"
         type="date"
         value={endDate}
         onChange={handleChange}
       />
-      <button className="Form__button" type="submit">Analyze</button>
+      <button className="DateRange__button" type="submit">Analyze</button>
     </form>
   )
 }
