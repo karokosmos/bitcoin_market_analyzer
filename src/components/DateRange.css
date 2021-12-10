@@ -1,8 +1,30 @@
-.DateRange__input {
-  border: 2px solid #262626;
-  padding: 0.5rem;
-  margin: 0 0.5rem;
+.DateRange {
+  display: flex;
+  background-color: #262626;
+  padding: 2rem;
   border-radius: 3px;
+}
+
+.DateRange__group {
+  display: flex;
+  flex-direction: column;
+}
+
+.DateRange__label {
+  margin: 0 0 5px 5px;
+  font-family: 'Outfit',
+    sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: #7a7a7a;
+}
+
+.DateRange__input {
+  border: 3px solid #fff;
+  padding: 0.5rem;
+  margin: 0 5px;
+  border-radius: 2px;
   font-family: 'Outfit',
     sans-serif;
   font-size: 1rem;
@@ -11,21 +33,25 @@
 }
 
 .DateRange__input:focus {
-  border: 2px solid #8BC53F;
+  border: 3px solid #7a7a7a;
   opacity: 1;
   outline: none;
-  box-shadow: 1px 1px 0 #eee;
   background-color: none;
 }
 
 .DateRange__button {
   background-color: #8BC53F;
   border: none;
-  padding: 1rem;
+  padding: 0.8rem 1rem;
+  margin: 0 5px;
   color: #fff;
+  border-radius: 2px;
+  align-self: flex-end;
+  font-family: 'Outfit',
+    sans-serif;
+  font-size: 1rem;
 }
 
-/* .Form__input::-webkit-datetime-edit-day-field:focus {
-  background-color: #581cdb;
-  color: #eee;
-} */
+.DateRange__button:hover {
+  background-color: #83b73a;
+}

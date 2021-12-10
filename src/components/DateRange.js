@@ -40,20 +40,26 @@ const DateRange = ({ getMarketData }) => {
 
   return (
     <form className="DateRange" onSubmit={handleSubmit}>
-      <input
-        className="DateRange__input"
-        name="start-date"
-        type="date"
-        value={startDate}
-        onChange={handleChange}
-      />
-      <input
-        className="DateRange__input"
-        name="end-date"
-        type="date"
-        value={endDate}
-        onChange={handleChange}
-      />
+      <div className="DateRange__group">
+        <label className="DateRange__label" for="start-date">Start date</label>
+        <input
+          className="DateRange__input"
+          name="start-date"
+          type="date"
+          value={startDate}
+          onChange={handleChange}
+        />
+      </div>
+      <div className="DateRange__group">
+        <label className="DateRange__label" for="end-date">End date</label>
+        <input
+          className="DateRange__input"
+          name="end-date"
+          type="date"
+          value={endDate}
+          onChange={handleChange}
+        />
+      </div>
       <button className="DateRange__button" type="submit">Analyze</button>
     </form>
   )

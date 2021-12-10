@@ -36,8 +36,8 @@
 
 .Card__wrapper {
   position: absolute;
-  bottom: 0.2rem;
-  right: 0.4rem;
+  bottom: 0.4rem;
+  right: 0.6rem;
 }
 
 .Card__tooltip {
@@ -47,6 +47,7 @@
 .Card__button {
   color: #5b7f24;
   cursor: default;
+  font-size: 1.2rem;
 }
 
 .Card__button:hover {

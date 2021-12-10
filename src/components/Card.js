@@ -11,9 +11,7 @@ const Card = ({ title, data, dataType, info }) => {
       </div>
       <div className="Card__wrapper">
         <div className="Card__tooltip">
-          <span className="Card__button material-icons">
-            help_outline
-          </span>
+          <i className="Card__button far fa-question-circle"></i>
           <p className="Card__info">{info}</p>
         </div>
       </div>
