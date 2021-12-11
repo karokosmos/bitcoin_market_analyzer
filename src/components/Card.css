@@ -2,8 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #8bc53f;
-  font-family: 'Outfit',
+  font-family: 'Poppins',
     sans-serif;
   font-weight: 600;
   padding: 2rem 3rem;
@@ -14,15 +13,15 @@
 }
 
 .Card__title {
-  color: #5b7f24;
+  color: #9244ff;
   font-size: 1.2rem;
-  padding: 0.5rem 0;
+  padding: 5px 0;
 }
 
 .Card__content {
   display: flex;
   align-items: center;
-  color: #fff;
+  color: #262626;
 }
 
 .Card__data {
@@ -45,13 +44,13 @@
 }
 
 .Card__button {
-  color: #5b7f24;
+  color: #9244ff;
   cursor: default;
   font-size: 1.2rem;
 }
 
 .Card__button:hover {
-  color: #fff;
+  color: #7b36db;
 }
 
 .Card__info {

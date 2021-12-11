@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './DateRange.css'
 
-const DateRange = ({ getMarketData }) => {
+const DateRange = ({ createAnalysis }) => {
   const [startDate, setStartDate] = useState('')
   const [endDate, setEndDate] = useState('')
   const [startTimestamp, setStartTimestamp] = useState()
@@ -35,13 +35,13 @@ const DateRange = ({ getMarketData }) => {
     e.preventDefault()
     setStartDate('')
     setEndDate('')
-    getMarketData(startTimestamp, endTimestamp)
+    createAnalysis(startTimestamp, endTimestamp)
   }
 
   return (
     <form className="DateRange" onSubmit={handleSubmit}>
       <div className="DateRange__group">
-        <label className="DateRange__label" for="start-date">Start date</label>
+        <label className="DateRange__label" htmlFor="start-date">Start date</label>
         <input
           className="DateRange__input"
           name="start-date"
@@ -51,7 +51,7 @@ const DateRange = ({ getMarketData }) => {
         />
       </div>
       <div className="DateRange__group">
-        <label className="DateRange__label" for="end-date">End date</label>
+        <label className="DateRange__label" htmlFor="end-date">End date</label>
         <input
           className="DateRange__input"
           name="end-date"

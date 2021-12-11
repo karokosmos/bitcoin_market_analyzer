@@ -1,7 +1,9 @@
 .Analysis {
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .Analysis__cards {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
