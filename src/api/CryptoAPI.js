@@ -45,15 +45,3 @@ const getBitcoinMarketData = async (startDate, endDate) => {
 }
 
 export default getBitcoinMarketData
-
-
-/* const massaged = {
-        prices: response.data.prices.map(price => [new Date(price[0]), price[1]])
-      }
-      console.log(massaged) */
-
-/* const marketData = {
-  prices: dailyPrices.map(price => [new Date(price[0]), price[1]])
-}
-
-console.log(dailyPrices) */

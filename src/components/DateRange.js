@@ -1,26 +1,17 @@
 import React, { useState } from 'react'
 import './DateRange.css'
+import { getUnixFromInput } from '../utils/dates'
 
-const DateRange = ({ createAnalysis }) => {
+const DateRange = ({ getMarketData }) => {
   const [startDate, setStartDate] = useState('')
   const [endDate, setEndDate] = useState('')
   const [startTimestamp, setStartTimestamp] = useState()
   const [endTimestamp, setEndTimestamp] = useState()
 
-  /* console.log('dates: ', startDate, endDate)
-  console.log('timestamps: ', startTimestamp, endTimestamp) */
-
   const handleChange = e => {
     const name = e.target.name
     const dateValue = e.target.value
-
-    const dateArr = dateValue.split('-')
-    const year = Number(dateArr[0])
-    const month = Number(dateArr[1]) - 1
-    const day = Number(dateArr[2])
-
-    const date = new Date(year, month, day)
-    const unixTimestamp = date.getTime() / 1000
+    const unixTimestamp = getUnixFromInput(dateValue)
 
     if (name === 'start-date') {
       setStartDate(dateValue)
@@ -35,7 +26,7 @@ const DateRange = ({ createAnalysis }) => {
     e.preventDefault()
     setStartDate('')
     setEndDate('')
-    createAnalysis(startTimestamp, endTimestamp)
+    getMarketData(startTimestamp, endTimestamp)
   }
 
   return (

@@ -1,9 +1,11 @@
 .Analysis {
-  /* border: 1px solid black; */
+  width: 80vw;
 }
 
-.Analysis__cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.Analysis__dates {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #7a7a7a;
+  margin: 2rem 0 1rem 0;
 }

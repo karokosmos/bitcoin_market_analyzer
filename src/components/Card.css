@@ -15,17 +15,30 @@
 .Card__title {
   color: #9244ff;
   font-size: 1.2rem;
-  padding: 5px 0;
+  padding: 5px 0 10px 0;
 }
 
 .Card__content {
   display: flex;
+  flex-direction: column;
   align-items: center;
   color: #262626;
 }
 
+.Card__data-container {
+  display: flex;
+  align-items: center;
+}
+
+.Card__subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #7a7a7a;
+}
+
 .Card__data {
-  font-size: 3.2rem;
+  font-size: 2.2rem;
+  font-weight: 800;
 }
 
 .Card__data-type {
