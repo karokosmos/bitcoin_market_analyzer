@@ -1,11 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import './Analysis.css'
 import AnalysisCards from './AnalysisCards'
 import { getDateFromTimestamp } from '../utils/dates'
 
-const Analysis = ({ marketData, dateRange }) => {
-  const startDate = getDateFromTimestamp(dateRange.start * 1000)
-  const endDate = getDateFromTimestamp(dateRange.end * 1000)
+const Analysis = ({ marketData }) => {
+  const startDate = getDateFromTimestamp(marketData.startDate * 1000)
+  const endDate = getDateFromTimestamp(marketData.endDate * 1000)
 
   const createAnalysis = _ => {
     return {
@@ -68,6 +69,10 @@ const Analysis = ({ marketData, dateRange }) => {
       }
     })
 
+    // If price is only decreasing in the given date range, return null (indicating that one should not buy or sell)
+    if (!bestDayToBuy && !bestDayToSell) {
+      return null
+    }
     return {
       buy: bestDayToBuy.date,
       sell: bestDayToSell.date
@@ -80,6 +85,10 @@ const Analysis = ({ marketData, dateRange }) => {
       <AnalysisCards analysis={createAnalysis()} />
     </div>
   )
+}
+
+Analysis.propTypes = {
+  marketData: PropTypes.object.isRequired
 }
 
 export default Analysis

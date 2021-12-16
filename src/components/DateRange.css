@@ -1,11 +1,9 @@
 .DateRange {
   display: flex;
-  /* background-color: #262626; */
-  background-color: #eee;
+  background-color: var(--light-grey);
   padding: 2rem 2rem 2.5rem 2rem;
   border-radius: 3px;
-  font-family: 'Poppins',
-    sans-serif;
+  font-family: var(--font);
 }
 
 .DateRange__group {
@@ -15,12 +13,11 @@
 
 .DateRange__label {
   margin: 0 0 5px 5px;
-  font-family: 'Poppins',
-    sans-serif;
+  font-family: var(--font);
   text-transform: uppercase;
   font-weight: 600;
   font-size: 0.8rem;
-  color: #7a7a7a;
+  color: var(--grey);
 }
 
 .DateRange__input {
@@ -28,23 +25,21 @@
   padding: 0.5rem;
   margin: 0 5px;
   border-radius: 2px;
-  font-family: 'Poppins',
-    sans-serif;
+  font-family: var(--font);
   font-size: 1rem;
-  color: #262626;
+  color: var(--grey);
   width: 11rem;
 }
 
 .DateRange__input:focus {
-  border: 3px solid #7a7a7a;
+  border: 3px solid var(--grey);
   opacity: 1;
   outline: none;
   background-color: none;
 }
 
 .DateRange__button {
-  /* background-color: #8BC53F; */
-  background-color: #9244ff;
+  background-color: var(--purple);
   border: none;
   padding: 0.85rem 1rem;
   margin: 0 5px;
@@ -52,11 +47,25 @@
   border-radius: 2px;
   align-self: flex-end;
   font-size: 0.9rem;
-  font-family: 'Poppins',
-    sans-serif;
+  font-family: var(--font);
   font-weight: 600;
 }
 
 .DateRange__button:hover {
-  background-color: #7b36db;
+  background-color: var(--dark-purple);
+}
+
+@media only screen and (max-width: 600px) {
+  .DateRange {
+    flex-direction: column;
+  }
+
+  .DateRange__group:first-child {
+    margin-bottom: 1rem;
+  }
+
+  .DateRange__button {
+    align-self: center;
+    margin-top: 1rem;
+  }
 }

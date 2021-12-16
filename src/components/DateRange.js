@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import './DateRange.css'
 import { getUnixFromInput } from '../utils/dates'
 
@@ -54,6 +55,10 @@ const DateRange = ({ getMarketData }) => {
       <button className="DateRange__button" type="submit">Analyze</button>
     </form>
   )
+}
+
+DateRange.propTypes = {
+  getMarketData: PropTypes.func.isRequired
 }
 
 export default DateRange

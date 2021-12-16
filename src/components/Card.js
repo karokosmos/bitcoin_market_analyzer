@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import './Card.css'
 
 const Card = ({ title, subtitle, data, dataType, info }) => {
@@ -23,6 +24,15 @@ const Card = ({ title, subtitle, data, dataType, info }) => {
   )
 }
 
-//proptypes
+Card.propTypes = {
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  data: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
+  dataType: PropTypes.string,
+  info: PropTypes.string
+}
 
 export default Card

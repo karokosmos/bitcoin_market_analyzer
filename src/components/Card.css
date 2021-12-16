@@ -2,27 +2,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Poppins',
-    sans-serif;
+  font-family: var(--font);
   font-weight: 600;
   padding: 2rem 3rem;
   margin: 1rem;
   border-radius: 3px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
   position: relative;
 }
 
 .Card__title {
-  color: #9244ff;
+  color: var(--purple);
   font-size: 1.2rem;
   padding: 5px 0 10px 0;
+  text-align: center;
 }
 
 .Card__content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #262626;
+  color: var(--dark-grey);
 }
 
 .Card__data-container {
@@ -33,7 +33,7 @@
 .Card__subtitle {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #7a7a7a;
+  color: var(--grey);
 }
 
 .Card__data {
@@ -57,13 +57,13 @@
 }
 
 .Card__button {
-  color: #9244ff;
+  color: var(--purple);
   cursor: default;
   font-size: 1.2rem;
 }
 
 .Card__button:hover {
-  color: #7b36db;
+  color: var(--dark-purple);
 }
 
 .Card__info {
@@ -72,16 +72,25 @@
   top: 50%;
   right: 120%;
   z-index: 10;
-  background-color: #262626;
+  background-color: var(--dark-grey);
   color: #fff;
   padding: 0.7rem;
   border-radius: 2px;
   font-size: 0.8rem;
   font-weight: 400;
   width: 12rem;
-  /* text-align: center; */
 }
 
 .Card__button:hover+.Card__info {
   visibility: visible;
+}
+
+@media only screen and (max-width: 600px) {
+  .Card {
+    padding: 2.5rem 1rem;
+  }
+
+  .Card__data {
+    font-size: 1.2rem;
+  }
 }

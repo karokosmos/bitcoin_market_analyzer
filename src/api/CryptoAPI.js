@@ -36,11 +36,13 @@ const getBitcoinMarketData = async (startDate, endDate) => {
     const dailyVolumes = getDailyValues(response.data.total_volumes)
 
     return {
+      startDate,
+      endDate,
       dailyPrices,
       dailyVolumes
     }
   } catch (error) {
-    console.log(error)
+    console.log(error.message)
   }
 }
 

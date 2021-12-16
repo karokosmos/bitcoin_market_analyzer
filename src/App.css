@@ -1,21 +1,14 @@
-*,
-*:before,
-*:after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 .App {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Poppins',
-    sans-serif;
+  font-family: var(--font);
+  margin-bottom: 2rem;
 }
 
 .App__title {
   font-weight: 800;
   padding: 2rem 1rem;
-  color: #262626;
+  color: var(--dark-grey);
+  text-align: center;
 }
