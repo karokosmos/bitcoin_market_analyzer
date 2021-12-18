@@ -2,8 +2,6 @@
 
 ### [DEMO](https://bitcoin-market-analyzer.netlify.app/)
 
-![screencapture-bitcoin-market-analyzer-netlify-app-2021-12-18-20_01_39](https://user-images.githubusercontent.com/39268747/146652490-a861a4b9-9fab-41f7-ba12-278b8feb6934.png)
-
 The Bitcoin market analyzer gives you an analysis of the market based on the given date range. The analysis contains the following information:
 - longest bearish (downward) trend
 - date with the highest trading volume
@@ -25,3 +23,6 @@ $ npm install
 # Run the app
 $ npm run
 ```
+<br>
+
+![screencapture-bitcoin-market-analyzer-netlify-app-2021-12-18-20_01_39](https://user-images.githubusercontent.com/39268747/146652490-a861a4b9-9fab-41f7-ba12-278b8feb6934.png)
