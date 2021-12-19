@@ -26,11 +26,11 @@ const Analysis = ({ marketData }) => {
       const currPrice = price.value
       const prevPrice = arr[index - 1].value
 
-      if (currPrice < prevPrice && index === arr.length - 1) {
+      if (currPrice < prevPrice) {
         counter += 1
-        trend = counter
-      } else if (currPrice < prevPrice) {
-        counter += 1
+        if (index === arr.length - 1 && counter > trend) {
+          trend = counter
+        }
       } else if (currPrice >= prevPrice && counter > trend) {
         trend = counter
         counter = 0
@@ -38,6 +38,7 @@ const Analysis = ({ marketData }) => {
         counter = 0
       }
     })
+
     return trend
   }
 
