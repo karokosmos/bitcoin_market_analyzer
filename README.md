@@ -21,7 +21,7 @@ $ git clone https://github.com/karokosmos/bitcoin_market_analyzer.git
 $ npm install
 
 # Run the app
-$ npm run
+$ npm start
 ```
 <br>
 
