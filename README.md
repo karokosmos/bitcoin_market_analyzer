@@ -25,4 +25,4 @@ $ npm run
 ```
 <br>
 
-![screencapture-bitcoin-market-analyzer-netlify-app-2021-12-18-20_01_39](https://user-images.githubusercontent.com/39268747/146652490-a861a4b9-9fab-41f7-ba12-278b8feb6934.png)
+![screencapture-bitcoin-market-analyzer-netlify-app-2021-12-19-15_24_42](https://user-images.githubusercontent.com/39268747/146676440-9f4fec5f-6b3c-4e18-9892-1ce31de85131.png)
