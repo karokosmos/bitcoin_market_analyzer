@@ -2,7 +2,7 @@
 
 ### [DEMO](https://bitcoin-market-analyzer.netlify.app/)
 
-The Bitcoin market analyzer gives you an analysis of the market based on the given date range. The analysis contains the following information:
+The Bitcoin market analyzer gives you an analysis of the market based on the given date range (in the past). The analysis contains the following information:
 - longest bearish (downward) trend
 - date with the highest trading volume
 - best days to buy and sell bitcoin to get most profit
